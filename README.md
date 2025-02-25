@@ -7,7 +7,7 @@ Initially wanted to use TikTok's open source algorithm, but after delving throug
 ## Features
 
 - **open-source:** this repo will remain open-source and public
-- **customisable:** users will be able to literally fine-tune their own algorithms using controls built into the nothofagus website
+- **customisable:** users will be able to literally fine-tune their own algorithms using controls built into the nothofagus website. They will also be able to see why they are recommended videos.
 - **simple:** this algorithm will remain simple for now as my main specialty is software, NOT machine learning (however, contributions are welcome!). It will use the [Implicit](https://benfred.github.io/implicit/index.html) package, and process user likes, views, time watched and reports to create an engagement score for each user interaction with a video, and then use all user interactions to suggest new videos.
 
 ## Architecture
@@ -24,3 +24,11 @@ Initially wanted to use TikTok's open source algorithm, but after delving throug
 Very fast model, with recommendations displaying almost immediately. The only thing that takes a while is training the database - likely greatly accelerated by GPU however, haven't tested yet.
 
 Something especially helpful about this Python library is that the user's inputs can be updated and their data recalculated without needing to retrain the entire model. It's probably best to send an update of the user interactions every 3-5 videos or so to ensure the model remains accurate for each user.
+
+### User Customisation
+
+Will introduce custom weights for likes, time watched, etc so users can fine-tune their own engagement score. Hm not sure if this will work well without retraining the entire model since other users won't have updated engagements - maybe this can be something voted upon the day before every day by users?
+
+### Explaining Recommendations
+
+Man this package is awesome - also includes feature to explain recommendations by displaying the inputs that contributed most to the current recommendation. Again, super easy to implement yay!
