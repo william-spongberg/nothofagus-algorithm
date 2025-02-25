@@ -23,4 +23,4 @@ Initially wanted to use TikTok's open source algorithm, but after delving throug
 
 Very fast model, with recommendations displaying almost immediately. The only thing that takes a while is training the database - likely greatly accelerated by GPU however, haven't tested yet.
 
-Something especially helpful about this Python library is that the user's inputs can be updated and their data recalculated without needing to retrain the entire model.
+Something especially helpful about this Python library is that the user's inputs can be updated and their data recalculated without needing to retrain the entire model. It's probably best to send an update of the user interactions every 3-5 videos or so to ensure the model remains accurate for each user.
