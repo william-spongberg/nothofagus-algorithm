@@ -16,7 +16,11 @@ Initially wanted to use TikTok's open source algorithm, but after delving throug
 
 - Could wait for notification that external metadata database has been updated
 - Could send GET requests periodically, only get new data if timestamp updated
+- Only train once a day
+- Train once certain number of new videos added
 
 ### Recommending videos
 
 Very fast model, with recommendations displaying almost immediately. The only thing that takes a while is training the database - likely greatly accelerated by GPU however, haven't tested yet.
+
+Something especially helpful about this Python library is that the user's inputs can be updated and their data recalculated without needing to retrain the entire model.
